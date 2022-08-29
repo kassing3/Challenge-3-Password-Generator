@@ -14,12 +14,6 @@ ACCEPTANCE CRITERIA:
 var characterLowerCase = "abcdefghijklmnopqrst"
 var characterUpperCase
 
-let passwordCriteria = {
-  passwordLength = ,
-  passwordCharacters = "",
-
-
-}
 
 function getPasswordLength() {
   var getCharacterLength(number) = {
