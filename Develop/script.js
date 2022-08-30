@@ -11,17 +11,12 @@ ACCEPTANCE CRITERIA:
 */
 
 // Assignment code here
-var characterLowerCase = "abcdefghijklmnopqrst"
-var characterUpperCase
+var characterLowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n","o","p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var characterUpperCase = characterLowerCase.toUpperCase();
+var characterSpecial = ["!", "#", "$", "$", "%", "&", "'", "'","(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "@", "_", "^", "[", "]", "~"];
 
 
-function getPasswordLength() {
-  var getCharacterLength(number) = {
-    window.prompt('Character Length: Between 8 and 128, how long would you like your password to be?','');
-    if number
-  } 
 
-}
 
 
 // Get references to the #generate element
