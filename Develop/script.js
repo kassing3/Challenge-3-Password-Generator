@@ -12,10 +12,44 @@ ACCEPTANCE CRITERIA:
 
 // Assignment code here
 var characterLowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n","o","p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var characterUpperCase = characterLowerCase.toUpperCase();
+var characterUpperCase = ["A", "B","C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var characterNumeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var characterSpecial = ["!", "#", "$", "$", "%", "&", "'", "'","(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "@", "_", "^", "[", "]", "~"];
+var createdPassoword = ""
 
 
+function generatePassword() {
+  var getCharacterLength = parseInt (prompt("How many characters would you like your password to be be?"));
+ 
+  if (getCharacterLength < 8 || getCharacterLength > 128) {
+    alert("Error: The password characters must be at least 8 and no greater than 128");
+    showConfirm();
+  } else {
+    console.log(getCharacterLength)
+  };
+
+  var getLowerCase = confirm("Would you like to include lowercase characters?")
+  var getUpperCase = confirm("Would you like to include uppercase characters?");
+  var getNumeric = confirm("Would you like to include numeric characters?");
+  var getSpecial = confirm("Would you like to include special characters?");
+
+
+  if  (getLowerCase === true) {
+    for (i = 0; i < getCharacterLength; i++){
+      createdPassoword = createdPassoword += characterLowerCase[i]
+    }
+  } else if (getLowerCase === true &&  getUpperCase === true) {
+    for (i = 0; i < getCharacterLength / 2; i++){
+      createdPassoword = createdPassoword += characterLowerCase[i] += characterUpperCase[i]
+    }
+  } else if (getLowerCase === true &&  getUpperCase === true && getNumeric === true) {
+    for (i = 0; i < getCharacterLength / 3; i++){
+      createdPassoword = createdPassoword += characterLowerCase[i] += characterUpperCase[i]
+    }
+  }
+
+}
+  
 
 
 
