@@ -8,7 +8,7 @@ var characterSpecial = ["!", "#", "$", "$", "%", "&", "'", "'","(", ")", "*", "+
 
 function generatePassword() {
   var createdPassword = ""
-  var getCharacterLength = parseInt (prompt("How many characters would you like your password to be be?"));
+  var getCharacterLength = parseInt (prompt("How many characters would you like your password to be?"));
  
   if (getCharacterLength < 8 || getCharacterLength > 128) {
     alert("Error: The password characters must be at least 8 and no greater than 128");
